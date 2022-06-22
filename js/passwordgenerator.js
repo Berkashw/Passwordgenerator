@@ -76,11 +76,9 @@ const getRandomString = (
 	var randomString = ""
 
 	for (i = 0; i < passwordLength; i++) {
-		randomString += tempCharArray[getRandomNumber(0, tempCharArray.length)]
+		randomString += tempCharArray[getRandomNumber(0, tempCharArray.length - 1)]
 	}
 
 	return randomString
 }
-for (j = 0; j < 10; j++) {
-	console.log(getRandomString(8))
-}
+module.exports = getRandomString
