@@ -1,4 +1,5 @@
-const getRandomNumber = require("./getrandomnumber")
+import { getRandomNumber } from "./getrandomnumber.js"
+export { getRandomString }
 const charArray1 = [
 	"a",
 	"b",
@@ -63,7 +64,7 @@ const getRandomString = (
 	capitalLetters = true,
 	numberLetters = true
 ) => {
-	var tempCharArray = []
+	let tempCharArray = []
 	if (smallLetters) {
 		tempCharArray = [...tempCharArray, ...charArray1]
 	}
@@ -73,12 +74,12 @@ const getRandomString = (
 	if (numberLetters) {
 		tempCharArray = [...tempCharArray, ...charArray3]
 	}
-	var randomString = ""
-
+	let randomString = ""
+	let i = 0
 	for (i = 0; i < passwordLength; i++) {
 		randomString += tempCharArray[getRandomNumber(0, tempCharArray.length - 1)]
 	}
 
 	return randomString
 }
-module.exports = getRandomString
+console.log(getRandomString(8))

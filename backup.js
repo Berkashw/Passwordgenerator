@@ -1,6 +1,6 @@
 const getRandomString = require("./passwordgenerator")
 const outputField = document.getElementById("outputField")
-outputField.outputField.innerText = getRandomString(
+outputField.innerText = getRandomString(
 	8,
 	smallLettersCheck.checked,
 	capitalLettersCheck.checked,
