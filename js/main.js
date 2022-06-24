@@ -3,8 +3,9 @@ const resultField = document.getElementById("resultField")
 const smallLetersCheck = document.getElementById("smallLettersCheck")
 const capitalLettersCheck = document.getElementById("capitalLettersCheck")
 const numberLettersCheck = document.getElementById("numberLettersCheck")
+const stringLength = document.getElementById("stringLength")
 const randomString = getRandomString(
-	8,
+	stringLength.value,
 	smallLetersCheck.checked,
 	capitalLettersCheck.checked,
 	numberLettersCheck.checked
