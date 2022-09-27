@@ -3,6 +3,10 @@ const year = document.getElementById("year")
 const month = document.getElementById("month")
 const day = document.getElementById("day")
 const checkDayButton = document.getElementById("checkDayButton")
+const date = new Date()
+year.value = date.getFullYear()
+month.value = date.getMonth() + 1
+day.value = date.getDate()
 const getCurrentWeekDay = (date) => {
 	const week = [
 		"Sunday",
