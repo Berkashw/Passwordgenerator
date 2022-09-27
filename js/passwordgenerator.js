@@ -82,4 +82,3 @@ const getRandomString = (
 
 	return randomString
 }
-console.log(getRandomString(8))

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeekDay</title>
+  <script type="module" src="../js/WeekDay.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <h1 class="text-center">Определение дня недели по дате</h1>
+  <div class="container">
+    <div class="row gx-3 gap-3">
+      <div class="col-1">
+        <label for="formGroupInput" class="form-label">Year</label>
+        <input type="text" class="form-control" id="year" placeholder="Year" value = 2022>
+      </div>
+      <div class="col-1">
+        <label for="formInput" class="form-label">Month</label>
+        <input type="text" class="form-control" id="month" placeholder="Month" value =9>
+      </div>
+      <div class="col-1">
+        <label for="formInput" class="form-label">Day</label>
+        <input type="text" class="form-control" id="day" placeholder="Day" value =27>
+      </div>
+    </div>
+  </div> 
+  <div class="text-left">
+    <button type="button" class="btn btn-primary btn-lg" id = "checkDayButton">
+    Check week day
+    </button>
+  </div>
+  
+    <div class="form-label" >
+      <ul id = "resultField">
+        <li>WeekDay</li>
+      </ul>
+    </div>
+    <a href="../index.html" class="btn-primary">Вернуться на главную</a>
+</body>
+</html>
