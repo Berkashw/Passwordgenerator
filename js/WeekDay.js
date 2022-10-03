@@ -7,6 +7,7 @@ const date = new Date()
 year.value = date.getFullYear()
 month.value = date.getMonth() + 1
 day.value = date.getDate()
+
 const getCurrentWeekDay = (date) => {
 	const week = [
 		"Sunday",
