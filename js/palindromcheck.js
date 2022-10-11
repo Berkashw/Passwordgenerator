@@ -6,10 +6,16 @@ const reverseString = ([...string]) => string.reverse().join("")
 function palindromcheck(string) {
 	return string === reverseString(string)
 }
+const palindromCheck2 = (string) => {
+	for (let i = 0; i < string.length / 2; i++) {
+		if (string[i] !== string[string.length - 1 - i]) return false
+	}
+	return true
+}
 
 checkBtn.onclick = () => {
-	const tmptext = inputField.value
-	const checkflag = palindromcheck(tmptext)
+	const tmpText = inputField.value
+	const checkflag = palindromCheck2(tmpText)
 	checkflag
 		? (resultField.innerHTML = "Text is a palindrom")
 		: (resultField.innerHTML = "Text is not a palindrom")
