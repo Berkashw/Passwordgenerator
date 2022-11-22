@@ -14,14 +14,6 @@ const triangleDrawBtn = document.getElementById("triangleDrawBtn")
 const trianglePerimetr = document.getElementById("trianglePerimetr")
 const triangleArea = document.getElementById("triangleArea")
 
-const firstAppex = { x: firstPointX.value, y: firstPointY.value }
-const secondAppex = { x: secondPointX.value, y: secondPointY.value }
-const thirdAppex = { x: thirdPointX.value, y: thirdPointY.value }
-
-const firstSide = getLength(firstAppex, secondAppex)
-const secondSide = getLength(secondAppex, thirdAppex)
-const thirdSide = getLength(firstAppex, thirdAppex)
-
 const getTrianglePerimetr = (firstSide, secondSide, thirdSide) =>
 	firstSide + secondSide + thirdSide
 
@@ -31,12 +23,22 @@ const getTriangleArea = (firstSide, secondSide, thirdSide) => {
 }
 
 triangleDrawBtn.onclick = () => {
-	trianglePerimetr.innerHTML = getTrianglePerimetr(
+	trianglePerimetr.textContent = ""
+	triangleArea.textContent = ""
+	const firstAppex = { x: firstPointX.value, y: firstPointY.value }
+	const secondAppex = { x: secondPointX.value, y: secondPointY.value }
+	const thirdAppex = { x: thirdPointX.value, y: thirdPointY.value }
+
+	const firstSide = getLength(firstAppex, secondAppex)
+	const secondSide = getLength(secondAppex, thirdAppex)
+	const thirdSide = getLength(firstAppex, thirdAppex)
+
+	trianglePerimetr.textContent = getTrianglePerimetr(
 		firstSide,
 		secondSide,
 		thirdSide
 	)
-	triangleArea.innerHTML = getTriangleArea(firstSide, secondSide, thirdSide)
+	triangleArea.textContent = getTriangleArea(firstSide, secondSide, thirdSide)
 	const canvas = document.getElementById("myCanvas"),
 		context = canvas.getContext("2d")
 	context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight)
