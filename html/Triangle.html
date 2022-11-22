@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../js/Triangle.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Triangle</title>
+</head>
+<body>
+<div class="container">
+    <h1>Triangle</h1>
+    <div class ="container">
+        <canvas id="myCanvas" width="900" height="500"
+            style="background-color:#eee; border:1px solid #ccc;">
+            Ваш браузер не поддерживает Canvas
+        </canvas>
+    </div>
+    <div class ="row g-3 mb-3">
+        <div  class="col-1">
+            <label for="formInput" class="form-label">X1</label>     
+            <input type= "number" class="form-control" id="firstPointX" placeholder="X1" value =50>
+        </div>
+        <div class="col-1">
+            <label for="formInput" class="form-label">Y1</label>
+            <input type="number" class="form-control" id="firstPointY" placeholder="Y1" value=50>
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col-1">
+            <label for="formInput" class="form-label">X2</label>
+            <input type="number" class="form-control" id="secondPointX" placeholder="X2" value=150>
+        </div>
+        <div class="col-1">
+            <label for="formInput" class="form-label">Y2</label>
+            <input type="number" class="form-control" id="secondPointY" placeholder="X2" value=150>
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col-1">
+            <label for="formInput" class="form-label">X3</label>
+            <input type="number" class="form-control" id="thirdPointX" placeholder="X3" value=300>
+        </div>
+        <div class="col-1">
+            <label for="formInput" class="form-label">Y3</label>
+            <input type="number" class="form-control" id="thirdPointY" placeholder="X2" value=50>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class ="text-center">
+        <button class="btn btn-primary btn-lg" id="triangleDrawBtn" >Draw Triangle</button>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <label for="formInput" class="form-label">Triangle Perimetr</label>
+            <h5 class="border" id="trianglePerimetr"></h2>
+        </div>
+        <div class="col-2">
+            <label for="formInput" class="form-label">Triangle Area</label>
+            <h5 class="border" id="triangleArea"></h5>
+        </div>
+    </div>
+    </body>
+</div>
+    <a href="../index.html" class="btn-primary">Вернуться на главную</a>
+</body>
+</html>
